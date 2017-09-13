@@ -23,7 +23,7 @@ describe('booking search test', function () {
         checkOut.dateValue = testData.END_DATE;
         checkOut.input.waitForVisible(10000);
         checkOut.clickOnTargetDate();
-
+        SearchPage.submit.waitForVisible(10000)
         SearchPage.submit.click();
         ResultPage.getResult.map(function(address){
             expect(address.getText()).to.contain(testData.CITY);
